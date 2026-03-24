@@ -57,7 +57,7 @@ COMPTEUR2_ACTIVE_DEFAULT = True
 
 FORCE_RESTART_THRESHOLD = 20
 RESET_AT_GAME_NUMBER = 1440
-PREDICTION_TIMEOUT_MINUTES = 30
+PREDICTION_TIMEOUT_MINUTES = 10
 
 # ============================================================================
 # LOGGING
