@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: baccarat-ai
+    runtime: python
+    plan: free
+
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+
+    healthCheckPath: /health
+
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: PREDICTION_CHANNEL_ID
+        sync: false
+      - key: PORT
+        value: 10000
+      - key: LOG_LEVEL
+        value: INFO
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+    autoDeploy: true
